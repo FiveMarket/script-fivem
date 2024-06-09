@@ -6,26 +6,8 @@ Abaixo você pode ver tutoriais de como configurar facilmente:
 1. No arquivo "config.json" você coloca o token da sua loja.
 2. Em fxmanifest.lua é aonde você vai escolher a versão da sua base:
 
-
-server_scripts {
-    "server.js",
     -- DESCOMENTE A FRAMEWORK QUE VOCÊ USA: ESX, QB, VRP OU "CUSTOM" CASO TENHA UMA FRAMEWORK CUSTOMIZADA
-    -- "events/esx.lua",
-    -- "events/custom.lua",
-    -- "events/qbcore.lua",
-    -- "events/vrp.lua",
-}
 
-
-No caso se for vrp você deixaria deste jeito:
-server_scripts {
-    "server.js",
-    -- DESCOMENTE A FRAMEWORK QUE VOCÊ USA: ESX, QB, VRP OU "CUSTOM" CASO TENHA UMA FRAMEWORK CUSTOMIZADA
-    -- "events/esx.lua",
-    -- "events/custom.lua",
-    -- "events/qbcore.lua",
-     "events/vrp.lua",
-}
 
 Ficando deste jeito:
 ![image](https://github.com/FiveMarket/script-fivem/assets/36873119/ee8a1c46-ac4e-42f9-8077-066f14064156)
