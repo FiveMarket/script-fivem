@@ -7,6 +7,6 @@ server_scripts {
     -- "events/esx.lua",
     -- "events/custom.lua",
     -- "events/qbcore.lua",
-    -- "events/vrp.lua",
-    -- "@vrp/lib/utils.lua",
+    "@vrp/lib/utils.lua",
+    "events/vrp.lua",
 }
