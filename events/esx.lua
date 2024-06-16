@@ -2,20 +2,6 @@ local ESX
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-AddEventHandler('fivemarket:addMoney', AddMoney)
-AddEventHandler('fivemarket:removeMoney', RemoveMoney)
-AddEventHandler('fivemarket:addItem', AddItem)
-AddEventHandler('fivemarket:removeItem', RemoveItem)
-AddEventHandler('fivemarket:addWarn', AddWarn)
-AddEventHandler('fivemarket:removeWarn', RemoveWarn)
-AddEventHandler('fivemarket:addCar', AddCar)
-AddEventHandler('fivemarket:addCarTemporary', AddCarTemporary)
-AddEventHandler('fivemarket:removeCar', RemoveCar)
-AddEventHandler('fivemarket:addHouse', AddHouse)
-AddEventHandler('fivemarket:addHouseTemporary', AddHouseTemporary)
-AddEventHandler('fivemarket:removeHouse', RemoveHouse)
-AddEventHandler('fivemarket:addGroup', AddGroup)
-
 function AddMoney(playerId, amount)
     local xPlayer = ESX.GetPlayerFromId(playerId)
 
@@ -82,3 +68,17 @@ end
 
 function AddGroup()
 end
+
+AddEventHandler('fivemarket:addMoney', AddMoney)
+AddEventHandler('fivemarket:removeMoney', RemoveMoney)
+AddEventHandler('fivemarket:addItem', AddItem)
+AddEventHandler('fivemarket:removeItem', RemoveItem)
+AddEventHandler('fivemarket:addWarn', AddWarn)
+AddEventHandler('fivemarket:removeWarn', RemoveWarn)
+AddEventHandler('fivemarket:addCar', AddCar)
+AddEventHandler('fivemarket:addCarTemporary', AddCarTemporary)
+AddEventHandler('fivemarket:removeCar', RemoveCar)
+AddEventHandler('fivemarket:addHouse', AddHouse)
+AddEventHandler('fivemarket:addHouseTemporary', AddHouseTemporary)
+AddEventHandler('fivemarket:removeHouse', RemoveHouse)
+AddEventHandler('fivemarket:addGroup', AddGroup)

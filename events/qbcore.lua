@@ -1,19 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-AddEventHandler('fivemarket:addMoney', AddMoney)
-AddEventHandler('fivemarket:removeMoney', RemoveMoney)
-AddEventHandler('fivemarket:addItem', AddItem)
-AddEventHandler('fivemarket:removeItem', RemoveItem)
-AddEventHandler('fivemarket:addWarn', AddWarn)
-AddEventHandler('fivemarket:removeWarn', RemoveWarn)
-AddEventHandler('fivemarket:addCar', AddCar)
-AddEventHandler('fivemarket:addCarTemporary', AddCarTemporary)
-AddEventHandler('fivemarket:removeCar', RemoveCar)
-AddEventHandler('fivemarket:addHouse', AddHouse)
-AddEventHandler('fivemarket:addHouseTemporary', AddHouseTemporary)
-AddEventHandler('fivemarket:removeHouse', RemoveHouse)
-AddEventHandler('fivemarket:addGroup', AddGroup)
-
 function AddMoney(playerId, amount)
     QBCore.Functions.AddMoney("bank", playerId, amount)
 end
@@ -56,3 +42,17 @@ end
 
 function AddGroup()
 end
+
+AddEventHandler('fivemarket:addMoney', AddMoney)
+AddEventHandler('fivemarket:removeMoney', RemoveMoney)
+AddEventHandler('fivemarket:addItem', AddItem)
+AddEventHandler('fivemarket:removeItem', RemoveItem)
+AddEventHandler('fivemarket:addWarn', AddWarn)
+AddEventHandler('fivemarket:removeWarn', RemoveWarn)
+AddEventHandler('fivemarket:addCar', AddCar)
+AddEventHandler('fivemarket:addCarTemporary', AddCarTemporary)
+AddEventHandler('fivemarket:removeCar', RemoveCar)
+AddEventHandler('fivemarket:addHouse', AddHouse)
+AddEventHandler('fivemarket:addHouseTemporary', AddHouseTemporary)
+AddEventHandler('fivemarket:removeHouse', RemoveHouse)
+AddEventHandler('fivemarket:addGroup', AddGroup)
