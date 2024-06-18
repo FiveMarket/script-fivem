@@ -9,6 +9,6 @@ Abaixo você pode ver tutoriais de como configurar facilmente:
     -- DESCOMENTE A FRAMEWORK QUE VOCÊ USA: ESX, QB, VRP OU "CUSTOM" CASO TENHA UMA FRAMEWORK CUSTOMIZADA
 
 
-Ficando deste jeito: Na imagem está sem o código "@vrp/lib/utils.lua", - mas você não deve remove-lo.
+Ficando deste jeito: Na imagem está sem o código "@vrp/lib/utils.lua", - mas você não deve remove-lo. Se for VRP.
 
 ![image](https://github.com/FiveMarket/script-fivem/assets/36873119/ee8a1c46-ac4e-42f9-8077-066f14064156)
