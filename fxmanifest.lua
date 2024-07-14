@@ -7,12 +7,10 @@ version '1.0'
 
 local base = "CreativeNetwork" -- bases compatíveis: vRP, vRPEX, Creativev5, CreativeNetwork, ESX, QBCore
 
-if base == "vRP" then
-    server_scripts { "@vrp/lib/utils.lua", "script.js", "bases/vRP.lua" }
-elseif base == "vRPEX" then
+if base == "vRPEX" then
     server_scripts { "@vrp/lib/utils.lua", "script.js", "bases/vRPEX.lua" }
 elseif base == "Creativev5" then
-    server_scripts { "@vrp/lib/Utils.lua", "script.js", "bases/Creativev5.lua" }
+    server_scripts { "@vrp/lib/utils.lua", "script.js", "bases/Creativev5.lua" }
 elseif base == "CreativeNetwork" then
     server_scripts { "@vrp/lib/Utils.lua", "script.js", "bases/CreativeNetwork.lua" }
 elseif base == "ESX" then

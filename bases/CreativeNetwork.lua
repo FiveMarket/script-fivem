@@ -1,3 +1,6 @@
+-- Este modelo foi feito em cima da CreativeNetwork original. Sujeito a diferenças quando comparado a sua base.
+-- Caso você tenha alguma dúvida ou problema referente a adaptação, você pode solicitar um orçamento no Discord da gho$tware: https://discord.gg/rzfTSQ29Dn
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- [[ VRP ]]
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -104,7 +107,7 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 -- PERMANENTE
--- POR PADRÃO AS BASES CREATIVES NÃO POSSUEM CASAS PERMANENTES. Caso queira, você pode criar uma lógica para adicionar casas permanentes ao seu servidor.
+-- POR PADRÃO AS BASES CREATIVES NETWORK NÃO POSSUEM CASAS PERMANENTES. Caso queira, você pode criar uma lógica para adicionar casas permanentes ao seu servidor.
 -- OBSERVAÇÃO: PARÂMETRO "NAME" É REFERENTE AO NOME DA CASA, NÃO DO INTERIOR.
 AddEventHandler('fivemarket:addHouse',function(Passport, Name)
     -- Crie sua lógica de casa permanente aqui. Você pode seguir o modelo abaixo da temporária, colocando um alto valor em "tax", para simular ser "permanente".
@@ -156,6 +159,7 @@ AddEventHandler('fivemarket:removeHouse',function(Passport, Name)
 
             vRP.RemSrvData("Vault:"..Name)
             vRP.RemSrvData("Fridge:"..Name)
+            vRP.RemSrvData("Wardrobe:"..Name)
             vRP.Query("propertys/Sell",{ name = Name })
         end
     end
