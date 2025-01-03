@@ -33,11 +33,11 @@ end)
 -- [[ ADDITEM ]]
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-AddEventHandler('fivemarket:addItem', function(Passport, Item)
+AddEventHandler('fivemarket:addItem', function(Passport, Item, Quantity)
     local source = source
 
     if source then
-        return vRP.giveInventoryItem(Passport,Item,1)
+        return vRP.giveInventoryItem(Passport,Item,Quantity)
     else
         -- adicione sua lógica para gerar o item para o jogador caso esteja offline.
     end
@@ -47,7 +47,7 @@ end)
 -- [[ REMOVEITEM ]]
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-AddEventHandler('fivemarket:removeItem', function(Passport, Item)
+AddEventHandler('fivemarket:removeItem', function(Passport, Item, Quantity)
     local source = source
 
     if source then

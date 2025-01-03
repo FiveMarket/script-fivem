@@ -35,13 +35,13 @@ end)
 -- [[ ADDITEM ]]
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-AddEventHandler('fivemarket:addItem', function(Passport, Item)
+AddEventHandler('fivemarket:addItem', function(Passport, Item, Quantity)
     local source = vRP.Source(Passport)
 
     if source then
-        return vRP.GenerateItem(Passport, Item, 1, false)
+        return vRP.GenerateItem(Passport, Item, Quantity, false)
     else
-        return GiveItemToOfflinePlayer(Passport, Item)
+        return GiveItemToOfflinePlayer(Passport, Item, Quantity)
     end
 end)
 
@@ -49,13 +49,13 @@ end)
 -- [[ REMOVEITEM ]]
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-AddEventHandler('fivemarket:removeItem', function(Passport, Item)
+AddEventHandler('fivemarket:removeItem', function(Passport, Item, Quantity)
     local source = vRP.Source(Passport)
 
     if source then
-        return vRP.RemoveItem(Passport, Item, 1, false)
+        return vRP.RemoveItem(Passport, Item, Quantity, false)
     else
-        return RemoveItemFromOfflinePlayer(Passport, Item)
+        return RemoveItemFromOfflinePlayer(Passport, Item, Quantity)
     end
 end)
 
@@ -185,7 +185,7 @@ end)
 -- [[ GIVEITEMTOOFFLINEPLAYER ]]
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-function GiveItemToOfflinePlayer(Passport, Item)
+function GiveItemToOfflinePlayer(Passport, Item, Quantity)
     local Consult = vRP.Query("playerdata/GetData", { Passport = Passport, dkey = "Datatable" })
 
     if Consult and Consult[1] then
@@ -196,7 +196,7 @@ function GiveItemToOfflinePlayer(Passport, Item)
 
         for k, v in pairs(inventory) do
             if v.item == Item then
-                v.amount = v.amount + 1
+                v.amount = v.amount + Quantity
                 itemFound = true
                 break
             end
@@ -212,7 +212,7 @@ function GiveItemToOfflinePlayer(Passport, Item)
             end
 
             if newIndex then
-                inventory[newIndex] = {item = Item, amount = 1}
+                inventory[newIndex] = {item = Item, amount = Quantity}
             else
                 print("Inventário cheio, não foi possível adicionar o item: " .. Item)
             end
@@ -231,7 +231,7 @@ end
 -- [[ REMOVEITEMFROMOFFLINEPLAYER ]]
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-function RemoveItemFromOfflinePlayer(Passport, Amount)
+function RemoveItemFromOfflinePlayer(Passport, Amount, Quantity)
     local Consult = vRP.Query("playerdata/GetData", { Passport = Passport, dkey = "Datatable" })
 
     if Consult and Consult[1] then
@@ -243,7 +243,7 @@ function RemoveItemFromOfflinePlayer(Passport, Amount)
         for k, v in pairs(inventory) do
             if v.item == Item then
                 if v.amount > 1 then
-                    v.amount = v.amount - 1
+                    v.amount = v.amount - Quantity
                 else
                     inventory[k] = nil
                 end

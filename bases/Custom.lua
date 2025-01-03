@@ -8,10 +8,10 @@ end)
 AddEventHandler('fivemarket:removeMoney',function(Passport, Amount)
 end)
 
-AddEventHandler('fivemarket:addItem', function(Passport, Item)
+AddEventHandler('fivemarket:addItem', function(Passport, Item, Quantity)
 end)
 
-AddEventHandler('fivemarket:removeItem', function(Passport, Item)
+AddEventHandler('fivemarket:removeItem', function(Passport, Item, Quantity)
 end)
 
 AddEventHandler('fivemarket:addCar',function(Passport, Vehicle)
