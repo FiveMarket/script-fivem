@@ -9,6 +9,8 @@ local base = "CreativeNetwork" -- bases compatíveis: vRP, vRPEX, Creativev5, Cr
 
 if base == "vRPEX" then
     server_scripts { "@vrp/lib/utils.lua", "script.js", "bases/vRPEX.lua" }
+elseif base == "vRP" then
+    server_scripts { "@vrp/lib/utils.lua", "script.js", "bases/VRP.lua" }
 elseif base == "Creativev5" then
     server_scripts { "@vrp/lib/utils.lua", "script.js", "bases/Creativev5.lua" }
 elseif base == "CreativeNetwork" then
